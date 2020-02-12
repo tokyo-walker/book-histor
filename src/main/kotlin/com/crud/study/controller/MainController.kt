@@ -1,6 +1,7 @@
 package com.crud.study.controller
 
-import com.crud.study.repository.BookRepository
+import com.crud.study.service.AuthorService
+import com.crud.study.service.BookService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 
@@ -9,11 +10,14 @@ import org.springframework.web.bind.annotation.*
 class MainController {
 
     @Autowired
-    lateinit var bookRepository: BookRepository
+    lateinit var bookService: BookService
+    @Autowired
+    lateinit var authorService: AuthorService
+
 
     @GetMapping("/findAll")
     fun findAll():String{
-        return bookRepository.findById(1).get().title
+        return "findALL todo"
     }
 //    @RequestMapping(value = "/get/{name}", method = RequestMethod.GET)
 //    fun get(@PathVariable("name") name:String):String{

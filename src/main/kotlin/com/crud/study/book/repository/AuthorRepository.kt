@@ -1,9 +1,8 @@
-package com.crud.study.repository
+package com.crud.study.book.repository
 
-import com.crud.study.dto.Author
+import com.crud.study.book.dto.Author
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
-import javax.validation.ReportAsSingleViolation
 
 @Repository
 interface AuthorRepository : JpaRepository<Author, Int> {
